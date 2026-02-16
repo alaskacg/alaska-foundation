@@ -1,73 +1,94 @@
-# React + TypeScript + Vite
+# The Alaska Foundation
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A professional non-profit website dedicated to forest conservation and land preservation in Alaska.
 
-Currently, two official plugins are available:
+🌲 **Live Site:** [https://alaskacg.github.io/alaska-foundation/](https://alaskacg.github.io/alaska-foundation/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## About
 
-## React Compiler
+The Alaska Foundation is a 501(c)(3) nonprofit organization dedicated to preserving Alaska's pristine forests and wilderness through conservation, land protection, and community engagement. Our work focuses on:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Tongass Forest Preservation** - Protecting America's largest temperate rainforest
+- **Chugach Forest Preservation** - Safeguarding coastal forests and mountain wilderness
+- **Land Donation Program** - Supporting landowners in permanent conservation
 
-## Expanding the ESLint configuration
+## Technology Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **Framework:** React 19 with TypeScript
+- **Build Tool:** Vite 7
+- **Styling:** Tailwind CSS 4 with custom earth-tone color palette
+- **Routing:** React Router 7
+- **SEO:** react-helmet-async with comprehensive meta tags
+- **Icons:** Lucide React
+- **Deployment:** GitHub Pages with GitHub Actions
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## SEO Features
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+✅ Comprehensive meta tags (title, description, keywords)  
+✅ Open Graph tags for social media sharing  
+✅ Twitter Card support  
+✅ JSON-LD structured data for NonProfit organization  
+✅ Semantic HTML5 markup  
+✅ Sitemap.xml for search engines  
+✅ Robots.txt configuration  
+✅ Mobile-responsive design  
+✅ Fast load times with optimized assets  
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## Pages
+
+- **Home** - Hero section, mission statement, impact stats, featured programs
+- **About** - Foundation history, team, values, conservation goals
+- **Programs** - Detailed information on Tongass, Chugach, and Land Donation programs
+- **Donate** - Donation levels, giving options, tax information (payment integration ready)
+- **Contact** - Contact form, office information, FAQs
+
+## Development
+
+```bash
+# Install dependencies
+npm install --legacy-peer-deps
+
+# Run development server
+npm run dev
+
+# Build for production
+npm run build
+
+# Preview production build
+npm run preview
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Deployment
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+The site automatically deploys to GitHub Pages when changes are pushed to the `main` branch via GitHub Actions workflow.
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## Project Structure
+
 ```
+alaska-foundation/
+├── src/
+│   ├── components/     # Reusable components (Navbar, Footer, SEO)
+│   ├── pages/         # Page components (Home, About, Programs, etc.)
+│   ├── lib/           # Utility functions
+│   └── main.tsx       # Application entry point
+├── public/            # Static assets (sitemap.xml, robots.txt)
+└── .github/
+    └── workflows/     # GitHub Actions deployment workflow
+```
+
+## SEO Keywords
+
+- Alaska forest conservation
+- Land preservation Alaska
+- Tongass forest protection
+- Chugach conservation
+- Alaska charitable foundation
+- Donate land Alaska
+
+## License
+
+© 2024 The Alaska Foundation. All rights reserved.
+
+---
+
+Built with ❤️ for Alaska's wilderness
